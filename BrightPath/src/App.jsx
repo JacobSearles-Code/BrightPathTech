@@ -9,7 +9,7 @@ import Layout from './pages/layout.jsx'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/BrightPathTech'>
       <Routes>
 
         <Route path="/" element={<Landing />} />
