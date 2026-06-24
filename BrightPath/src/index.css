@@ -1,0 +1,430 @@
+:root {
+    --accent: #009e25;
+}
+
+body {
+    background-color: #fafafa;
+
+    background-image:
+        linear-gradient(#0000001f 1px, transparent 1px),
+        linear-gradient(90deg, #0000001f 1px, transparent 1px);
+
+    background-size: 40px 40px;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid var(--accent);
+    z-index: 10;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+.previous-projects-page p, .previous-projects-page h3, .previous-projects-page h2, .previous-projects-page h1 {
+    text-align: center;
+}
+
+.headerDiv {
+    padding-top: 5em;
+    display: flex;
+    justify-content: center;
+}
+
+.landingName h1{
+    margin-top: 355px;
+    margin-left: 15px;
+    display: block;
+    color: black;
+    font-family: "JetBrains Mono", monospace;
+    overflow: hidden;
+    font-size: 54px;
+    white-space: nowrap;
+    border-right: .15em solid orange;
+    width: 0;
+    animation:
+        typing 2s steps(30, end) forwards,
+        blink-caret 1s step-end infinite;
+}
+
+.hiddenIcon {
+    color: transparent;
+}
+
+.companyName h1{
+    margin-top: 20px;
+    margin-left: 15px;
+    display: block;
+    color: black;
+    font-family: "JetBrains Mono", monospace;
+    overflow: hidden;
+    font-size: 48px;
+    white-space: nowrap;
+    border-right: .15em solid orange;
+    width: 16ch;
+    animation:
+        blink-caret 1s step-end infinite;
+}
+
+.landingNav {
+    margin-top: 40px;
+    display: inline-block;
+    color: black;
+    font-family: monospace;
+    overflow: hidden;
+    font-size: 36px;
+    white-space: nowrap;
+    border-right: .15em solid orange;
+    width: 0;
+    animation:
+        navTyping 2s steps(30, end) forwards,
+        blink-caret 1s step-end infinite;
+}
+
+.navItem {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+}
+
+
+@keyframes navTyping {
+    from { width: 0; }
+    to { width: 26ch; }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 16ch; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+.navBar {
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: bold;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+
+.navBar a:hover {
+    color: var(--accent)
+}
+
+.navBar a:hover .hiddenIcon {
+    color: var(--accent)
+}
+
+.navItem:hover {
+    color: var(--accent);
+}
+
+.mission {
+    opacity: 80%;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 25%;
+    height: 250px;
+    border-radius: 25px;
+    margin: 250px auto auto 100px;
+    padding: 5px;
+    text-align: center;
+    color: black;
+    border: 1px solid rgb(224, 224, 224);
+}
+
+.mission p {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: -263px 150px auto auto;
+}
+
+.homeImg {
+    background-color: whitesmoke;
+    opacity: 80%;
+    border-radius: 25px;
+    margin: 10px;   
+    height: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(224, 224, 224);
+} 
+
+.addInfo {
+    background-color: whitesmoke;
+    opacity: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 75%;
+    height: 150px;
+    border-radius: 25px;
+    margin: 75px auto;
+    padding: 5px;
+    text-align: center;
+    color: black;
+    border: 1px solid rgb(224, 224, 224);
+}
+
+/* Media Queries to help with mobile */
+
+@media (max-width: 480px) {
+    .navBar {
+        width: 100%;
+    }
+
+    .mission {
+        width: 90%;
+        margin: 125px auto 30px auto;
+        height: fit-content;
+    }
+
+    .images {
+        width: 90%;
+        margin: 0px auto 25px auto;
+    }
+
+    .addInfo {
+        width: 90%;
+        margin: auto auto 15px auto;
+        height: fit-content;
+    }
+}
+
+.carousel {
+  width: 50%;
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  gap: 4vw;
+  anchor-name: --my-carousel;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  margin: auto;
+  opacity: 80;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+}
+
+ul::scroll-button(*) {
+  border: 0;
+  font-size: 2rem;
+  background: none;
+  color: black;
+  opacity: 1;
+  cursor: pointer;
+  position: absolute;
+  position-anchor: --my-carousel;
+  transition: transform 0.15s ease-in-out;
+}
+
+ul::scroll-button(*):hover,
+ul::scroll-button(*):focus {
+  transform: scale(1.1);
+}
+
+ul::scroll-button(*):active {
+    opacity: 1;
+  translate: 1px 1px;
+}
+
+ul::scroll-button(*):disabled {
+  transform: scale(1.0);
+  cursor: unset;
+  color: gray;
+}
+
+ul::scroll-button(left) {
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid silver;
+  content: "←" / "Previous";
+  right: calc(anchor(left) - 20px);
+  bottom: calc(anchor(top) - 200px);
+}
+
+ul::scroll-button(right) {
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid silver;
+  content: "→" / "Next";
+  left: calc(anchor(right) - 20px);
+  bottom: calc(anchor(top) - 200px);
+}
+
+li {
+  list-style-type: none;
+  background-color: #e9e9e9;
+  border: 1px solid #dddddd;
+  border-radius: 30px;
+  padding: 20px;
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+}
+
+.previous-projects {
+  display: flex;                
+  justify-content: space-between;
+  align-items: center;          
+  text-align: center;           
+  width: 75%;              
+  margin: auto;    
+}
+
+.nameBar {
+    background-color: rgb(0, 102, 255);
+    height: 40px;
+    text-align: left;
+    margin-top: -40px;
+}
+
+.previous-projects img {
+  width: 150px;                 
+  height: auto;
+}
+.previous-projects h2, .previous-projects h3 {
+  flex-grow: 1;                 
+  margin: 0 20px;               
+}
+
+.appDesc {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+.pageDesc {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.Description {
+    width: 75%;
+    margin: auto;
+    height: 100%;
+    text-align: center;
+}
+
+.team-section {
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.terminal-card {
+    width:320px;
+    background:#0d1117;
+    border:1px solid #30363d;
+    border-radius:12px;
+    overflow:hidden;
+    font-family:"JetBrains Mono", monospace;
+    margin: auto;
+}
+
+.teamGreet {
+    text-align: center;
+}
+
+.sendEmail {
+    color:#009e25;
+    border: 1px solid #009e25;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.sendEmail:hover {
+    cursor: pointer;
+}
+
+.greenText {
+    color:#009e25;
+}
+
+.emailInput {
+    background-color: #0d1117;
+    color: white;
+    width: 95%;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.contact-card {
+    width:520px;
+    height: 400px;
+    background:#0d1117;
+    border:1px solid #30363d;
+    border-radius:12px;
+    overflow:hidden;
+    font-family:"JetBrains Mono", monospace;
+    margin: 100px auto 5px;
+}
+
+.terminal-bar {
+    height:40px;
+    background:#161b22;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:0 15px;
+}
+
+.terminal-bar p {
+    color:#8b949e;
+    margin-left:10px;
+}
+
+.terminal-content {
+    padding:25px;
+    color:#c9d1d9;
+}
+
+.terminal-content span {
+    color:#4ade80;
+}
+
+.online {
+    color:#4ade80;
+}
+
+.dot {
+    width:12px;
+    height:12px;
+    border-radius:50%;
+}
+
+.red {background:#ff5f56;}
+.yellow {background:#ffbd2e;}
+.green {background:#27c93f;}
+
