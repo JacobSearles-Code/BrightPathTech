@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom'
 
 import Home from './pages/home.jsx'
 import Contact from './pages/contact.jsx'
@@ -9,7 +9,7 @@ import Layout from './pages/layout.jsx'
 
 function App() {
   return (
-    <BrowserRouter basename='/BrightPathTech'>
+    <HashRouter>
       <Routes>
 
         <Route path="/" element={<Landing />} />
@@ -21,7 +21,7 @@ function App() {
         </Route>
 
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
