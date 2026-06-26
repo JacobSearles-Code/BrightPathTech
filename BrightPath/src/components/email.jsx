@@ -18,13 +18,13 @@ const Email = () => {
         ${message}
         `;
 
-        const mailto = `mailto:jacobsearlest@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const mailto = `mailto:brightpathtechontario@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
         window.open(mailto, "_blank", "noopener,noreferrer");
 
         setStatus("> message_sent");
     }
-//brightpathtechontario@gmail.com <- Swap when Live
+
   return (
     <div className="contact-card">
 
@@ -40,7 +40,7 @@ const Email = () => {
       <div className="terminal-content">
 
         <p>$ load_profile</p>
-        <p className="greenText">$ connection initialised</p>
+        <p className="greenText">$ connection_initialised</p>
 
         <p>
           NAME: <input className="emailInput" type="text" placeholder="enter_name" onChange={(e) => setName(e.target.value)} />

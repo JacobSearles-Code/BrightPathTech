@@ -11,16 +11,16 @@ const Team = () => {
     {
       name: "Darwin Wagar",
       role: "Developer",
-      skills: "Figma, CSS, UX"
+      skills: "C#, C++, Python"
     },
     {
       name: "Jarrod Hoddinott",
-      role: "Backend Developer",
+      role: "Team Lead",
       skills: "Node.js, Databases, APIs"
     },
     {
       name: "Maxwell Schriner",
-      role: "Backend Developer",
+      role: "Developer",
       skills: "Node.js, Databases, APIs"
     }
   ];

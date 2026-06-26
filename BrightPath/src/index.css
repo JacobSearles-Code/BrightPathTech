@@ -115,7 +115,7 @@ header a {
 
 .navBar {
     font-family: monospace;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
     margin: auto;
     display: flex;
@@ -125,7 +125,7 @@ header a {
     position: absolute;
     bottom: 0;
     right: 0;
-    left: 0;
+    left: 80px;
     text-align: center;
 }
 
@@ -189,31 +189,6 @@ header a {
     text-align: center;
     color: black;
     border: 1px solid rgb(224, 224, 224);
-}
-
-/* Media Queries to help with mobile */
-
-@media (max-width: 480px) {
-    .navBar {
-        width: 100%;
-    }
-
-    .mission {
-        width: 90%;
-        margin: 125px auto 30px auto;
-        height: fit-content;
-    }
-
-    .images {
-        width: 90%;
-        margin: 0px auto 25px auto;
-    }
-
-    .addInfo {
-        width: 90%;
-        margin: auto auto 15px auto;
-        height: fit-content;
-    }
 }
 
 .carousel {
@@ -428,3 +403,66 @@ li {
 .yellow {background:#ffbd2e;}
 .green {background:#27c93f;}
 
+/* Media Queries to help with mobile */
+
+@media (max-width: 480px) {
+    header {
+        height: 100px;
+        background-color: #fafafa;
+
+        background-image:
+            linear-gradient(#0000001f 1px, transparent 1px),
+            linear-gradient(90deg, #0000001f 1px, transparent 1px);
+
+        background-size: 40px 40px;
+    }
+
+    .navBar {
+        font-size: 24px;
+        width: auto;
+        position: relative;
+        left: 0;
+        bottom: 5px;
+    }
+
+    .mission {
+        width: 90%;
+        margin: 125px auto 30px auto;
+        height: fit-content;
+    }
+
+    .images {
+        width: 90%;
+        margin: 0px auto 25px auto;
+    }
+
+    .addInfo {
+        width: 90%;
+        margin: auto auto 15px auto;
+        height: fit-content;
+    }
+
+    .companyName h1{
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .landingName h1{
+        width: 100%;
+        font-size: 36px;
+    }
+
+    .navItem {
+        font-size: 24px;
+    }
+
+    @keyframes navTyping {
+        from { width: 0; }
+        to { width: 18ch; }
+    }
+
+    .contact-card {
+        margin-top: 125px;
+        width: 100%;
+    }
+}
